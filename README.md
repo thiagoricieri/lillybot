@@ -3,5 +3,6 @@
 
 ## Used environment variables
 ```
+SLACK_TOKEN
 
 ```
