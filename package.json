@@ -1,0 +1,35 @@
+{
+  "name": "lillybot",
+  "version": "1.0.0",
+  "description": "Yet another bot to post PR updates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagoricieri/lillybot.git"
+  },
+  "keywords": [
+    "pr",
+    "github",
+    "bot",
+    "chatbot"
+  ],
+  "author": "Thiago Ricieri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thiagoricieri/lillybot/issues"
+  },
+  "homepage": "https://github.com/thiagoricieri/lillybot#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "dateformat": "^3.0.3",
+    "express": "^4.16.2",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}
