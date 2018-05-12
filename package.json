@@ -26,12 +26,14 @@
   },
   "homepage": "https://github.com/thiagoricieri/lillybot#readme",
   "dependencies": {
+    "@aoberoi/passport-slack": "^1.0.5",
     "@octokit/rest": "^15.4.1",
     "@slack/client": "^4.2.2",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "dateformat": "^3.0.3",
     "express": "^4.16.2",
+    "passport": "^0.4.0",
     "request": "^2.85.0"
   },
   "devDependencies": {
