@@ -4,7 +4,9 @@
   "description": "Yet another bot to post PR updates",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app",
+    "start": "NODE_ENV=production node index.js",
+    "test": "mocha --exit tests/**/**.spec.js"
   },
   "repository": {
     "type": "git",
