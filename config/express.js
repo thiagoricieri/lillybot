@@ -1,6 +1,6 @@
 const express = require('express')
     , bodyParser = require('body-parser')
-    , lillybot = require('bot/lilly')
+    , lillybot = require('../bot/lilly')
 
 module.exports = function(){
   let app = express()

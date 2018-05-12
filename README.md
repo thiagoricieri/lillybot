@@ -3,6 +3,8 @@
 
 ## Used environment variables
 ```
-SLACK_TOKEN
-
+export SLACK_TOKEN=123
+export SLACK_CLIENT_ID=123
+export SLACK_SECRET=123
+export SLACK_WEBHOOK_URL=http
 ```
