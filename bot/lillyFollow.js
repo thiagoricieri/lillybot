@@ -2,9 +2,9 @@ const { log } = require('./utils')
 const { dig, burry, bark, barkToProblem } = require('./lillyBurry')
 const github = require('./github')
 
-module.exports = function(repo, responseUrl) {
+module.exports = function(repoAndHook, responseUrl) {
   Promise.resolve(dig())
-    .then(notFollowingRepo(repo))
+    .then(notFollowingRepo(repoAndHook))
     .then(pullRepoRequests)
     .then(burryRepo)
     .then(log)
@@ -13,12 +13,13 @@ module.exports = function(repo, responseUrl) {
     .catch(barkToProblem(responseUrl))
 }
 
-const notFollowingRepo = function(repo) {
+const notFollowingRepo = function(repoAndHook) {
+  let [ repo, hook ] = repoAndHook.split(' ')
   return stick => {
-    if (stick && stick.following && stick.following.includes(repo)) {
+    if (stick && stick.following && stick.following.filter(f => f.repo == repo).length > 0) {
       throw new Error(`I'm already following \`${repo}\`!`)
     }
-    return { stick, repo }
+    return { stick, repo, hook }
   }
 }
 const pullRepoRequests = function(bundle) {
@@ -28,9 +29,9 @@ const pullRepoRequests = function(bundle) {
   })
   .then(data => bundle)
 }
-const burryRepo = function({ stick, repo }) {
+const burryRepo = function({ stick, repo, hook }) {
   if (!stick.following) stick.following = []
-  stick.following.push(repo)
+  stick.following.push({ repo, hook })
   burry(stick)
   return { stick, repo }
 }
