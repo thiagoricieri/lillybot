@@ -5,7 +5,7 @@ const express = require('express')
 module.exports = function(){
   let app = express()
 
-  app.use(bodyParser.urlencoded())
+  app.use(bodyParser.urlencoded({ extended: true }))
   app.use(bodyParser.json())
 
   lillybot(app)

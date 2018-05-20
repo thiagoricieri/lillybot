@@ -4,6 +4,7 @@ module.exports = {
     angry: "https://i.imgur.com/fZudfld.jpg"
   },
   emojis: {
-    search: ":lilly-search:"
+    search: ":lilly-search:",
+    bark: ":lilly-search:"
   }
 }
