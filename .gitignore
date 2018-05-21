@@ -5,3 +5,4 @@ env.sh
 stick.json
 pr.json
 cron.sh
+env.js
