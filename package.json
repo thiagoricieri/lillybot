@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "bash env.sh",
     "slack": "./ngrok http 20020",
+    "cron": "bash cron.sh",
     "start": "NODE_ENV=production node index.js",
     "test": "mocha --exit tests/**/**.spec.js"
   },

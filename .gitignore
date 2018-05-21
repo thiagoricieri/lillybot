@@ -4,3 +4,4 @@ package-lock.json
 env.sh
 stick.json
 pr.json
+cron.sh

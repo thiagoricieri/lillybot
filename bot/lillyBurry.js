@@ -13,13 +13,14 @@ const dig = function() {
 const burry = function(stick) {
   fs.writeFileSync(stickFile, JSON.stringify(stick, null, 2))
 }
-const bark = function(responseUrl) {
+const bark = function(responseUrl, lillyPic) {
+  let icon_url = lillyPic || c.avatars.angry
   return barked => {
-    let text = `${c.emojis.bark} _Woof! Woof!_\n> ${barked}`
+    let text = `${c.emojis.bark} _Woof! Woof!_\n${barked}`
     let response_type = 'in_channel'
     request.post({
       url: responseUrl,
-      json: { response_type, text }
+      json: { response_type, text, icon_url }
     }, (err, res, body) => {
       console.log(`Reply error: ${err}`)
       console.log(`Reply body: ${body}`)
@@ -32,7 +33,7 @@ const barkToProblem = function(responseUrl) {
     let response_type = 'in_channel'
     request.post({
       url: responseUrl,
-      json: { response_type, text }
+      json: { response_type, text, icon_url: c.avatars.angry }
     }, (err, res, body) => {
       console.log(`Reply error: ${err}`)
       console.log(`Reply body: ${body}`)
