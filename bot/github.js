@@ -1,6 +1,7 @@
+const c = require('./constants')
 const octokit = require('@octokit/rest')()
 octokit.authenticate({
   type: 'token',
-  token: process.env.GITHUB_TOKEN
+  token: c.env.githubToken
 })
 module.exports = octokit

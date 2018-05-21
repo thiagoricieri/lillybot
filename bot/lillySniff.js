@@ -23,7 +23,7 @@ module.exports = function() {
 
 const pullRepoRequests = function(bundle) {
    return github.pullRequests.getAll({
-    owner: process.env.GITHUB_ORG,
+    owner: c.env.githubOrg,
     repo: bundle.repo
   })
   .then(({ data }) => { return { data, ...bundle } })

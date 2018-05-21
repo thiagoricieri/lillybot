@@ -7,5 +7,6 @@ module.exports = {
   emojis: {
     search: ":lilly-search:",
     bark: ":lilly-search:"
-  }
+  },
+  env: require('../env')
 }

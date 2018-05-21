@@ -1,6 +1,7 @@
 const { log } = require('./utils')
 const { dig, burry, bark, barkToProblem } = require('./lillyBurry')
 const github = require('./github')
+const c = require('./constants')
 
 module.exports = function(repoAndHook, responseUrl) {
   Promise.resolve(dig())
@@ -24,7 +25,7 @@ const notFollowingRepo = function(repoAndHook) {
 }
 const pullRepoRequests = function(bundle) {
    return github.pullRequests.getAll({
-    owner: process.env.GITHUB_ORG,
+    owner: c.env.githubOrg,
     repo: bundle.repo
   })
   .then(data => bundle)
