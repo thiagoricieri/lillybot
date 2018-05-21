@@ -8,7 +8,7 @@ const dig = function() {
     let stick = fs.readFileSync(stickFile)
     return JSON.parse(stick)
   }
-  return {}
+  return { following: [], set: {}, alert: {} }
 }
 const burry = function(stick) {
   fs.writeFileSync(stickFile, JSON.stringify(stick, null, 2))

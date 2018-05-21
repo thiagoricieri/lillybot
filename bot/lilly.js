@@ -1,6 +1,7 @@
 const { log } = require('./utils')
 const lillyFollow = require('./lillyFollow')
-const lillyConfig = require('./lillyConfig')
+const lillySet = require('./lillySet')
+const lillyWoof = require('./lillyWoof')
 
 module.exports = function(app) {
   /**
@@ -25,12 +26,12 @@ module.exports = function(app) {
       httpRes.status(200).type('plain').send(challenge)
       return
     }
-    
     httpRes.status(200).type('json').send()
 
     log(httpReq.body)
 
-    if (command == "/lillyfollow") lillyFollow(text, responseUrl)
-    if (command == "/lillyconfig") lillyConfig(text, responseUrl)
+    if (command == "/lilly")        lillyWoof(text, responseUrl)
+    if (command == "/lillyfollow")  lillyFollow(text, responseUrl)
+    if (command == "/lillyset")     lillySet(text, responseUrl)
   })
 }

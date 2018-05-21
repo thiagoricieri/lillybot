@@ -30,7 +30,6 @@ const pullRepoRequests = function(bundle) {
   .then(data => bundle)
 }
 const burryRepo = function({ stick, repo, hook }) {
-  if (!stick.following) stick.following = []
   stick.following.push({ repo, hook })
   burry(stick)
   return { stick, repo }
