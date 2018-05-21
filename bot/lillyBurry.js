@@ -22,8 +22,8 @@ const bark = function(responseUrl, lillyPic) {
       url: responseUrl,
       json: { response_type, text, icon_url }
     }, (err, res, body) => {
-      console.log(`Reply error: ${err}`)
-      console.log(`Reply body: ${body}`)
+      // console.log(`Reply error: ${err}`)
+      // console.log(`Reply body: ${body}`)
     })
   }
 }
@@ -35,8 +35,8 @@ const barkToProblem = function(responseUrl) {
       url: responseUrl,
       json: { response_type, text, icon_url: c.avatars.angry }
     }, (err, res, body) => {
-      console.log(`Reply error: ${err}`)
-      console.log(`Reply body: ${body}`)
+      // console.log(`Reply error: ${err}`)
+      // console.log(`Reply body: ${body}`)
     })
   }
 }

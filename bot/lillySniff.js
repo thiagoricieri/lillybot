@@ -12,7 +12,6 @@ module.exports = function() {
       if (!hook) return
     }
     if (!lilly.alert[each.repo] || lilly.alert.length == 0) return
-    console.log(`Hook ${each.hook} is ${hook}`)
     Promise.resolve(each)
       .then(pullRepoRequests)
       .then(filterDelayedPullRequests)
