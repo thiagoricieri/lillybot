@@ -14,7 +14,7 @@ const burry = function(stick) {
   fs.writeFileSync(stickFile, JSON.stringify(stick, null, 2))
 }
 const bark = function(responseUrl, lillyPic) {
-  let icon_url = lillyPic || c.avatars.angry
+  let icon_url = lillyPic || c.avatars.happy
   return barked => {
     let text = `${c.emojis.bark} _Woof! Woof!_\n${barked}`
     let response_type = 'in_channel'
