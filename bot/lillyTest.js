@@ -12,6 +12,4 @@ const pullRepoRequests = function(repo) {
   })
 }
 
-Promise.resolve('pluto-tv-apple')
-  .then(pullRepoRequests)
-  .then(log)
+console.log('woof!')
