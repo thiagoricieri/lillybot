@@ -50,7 +50,7 @@ const formatMessage = function(responseUrl, repo, alerting) {
       let usersAnswers = alerting.map(u => `<${u}>`).join(', ')
       let plural = bundle.data.length > 1 ? 's' : ''
       let count = bundle.data.length
-      let prs = bundle.data.map(d => `> PR #${d.number} _"${d.title}"_ is *${d.daysOpened} days old*.\n><${d.url}>`).join('\n')
+      let prs = bundle.data.map(d => `> PR #${d.number} _"${d.title}"_ is *${d.daysOpened} days old*.\n><${d.html_url}>`).join('\n')
       bark(responseUrl)(`${usersAnswers}, I found *${count}* opened pull${plural} request${plural} in \`${repo}\`\n${prs}`)
     }
   }

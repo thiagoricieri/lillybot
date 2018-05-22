@@ -32,10 +32,10 @@ module.exports = function(incomingText, responseUrl) {
     lillySniff()
   }
   else if (key == 'hello') {
-    bark(responseUrl)(`<${c.avatars.happy}>`)
+    bark(responseUrl, c.avatars.happy)(``)
   }
   else if (key == 'bark') {
-    bark(responseUrl)(`<${c.avatars.angry}>`)
+    bark(responseUrl, c.avatars.angry)(``)
   }
   else {
     bark(responseUrl)(`I don't know what *${key}* means.`)
