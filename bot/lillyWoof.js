@@ -1,5 +1,6 @@
 const { log } = require('./utils')
 const { dig, burry, bark } = require('./lillyBurry')
+const c = require('./constants')
 const lillySniff = require('./lillySniff')
 
 module.exports = function(incomingText, responseUrl) {
@@ -29,6 +30,12 @@ module.exports = function(incomingText, responseUrl) {
   }
   else if (key == 'sniff') {
     lillySniff()
+  }
+  else if (key == 'hello') {
+    bark(responseUrl)(`<${c.avatars.happy}>`)
+  }
+  else if (key == 'bark') {
+    bark(responseUrl)(`<${c.avatars.angry}>`)
   }
   else {
     bark(responseUrl)(`I don't know what *${key}* means.`)
