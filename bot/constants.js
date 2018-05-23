@@ -1,8 +1,8 @@
 module.exports = {
-  maxDaysOpened: 2,
+  maxDaysOpened: 0,
   avatars: {
-    happy: "https://i.imgur.com/WNMaMZs.jpg",
-    angry: "https://i.imgur.com/fZudfld.jpg"
+    happy: "https://i.imgur.com/VfIzN1P.jpg",
+    angry: "https://i.imgur.com/VpGlXKv.jpg"
   },
   emojis: {
     search: ":lilly-search:",

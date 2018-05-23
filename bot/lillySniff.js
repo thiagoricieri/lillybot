@@ -50,8 +50,9 @@ const formatMessage = function(responseUrl, repo, alerting) {
       let usersAnswers = alerting.map(u => `<${u}>`).join(', ')
       let plural = bundle.data.length > 1 ? 's' : ''
       let count = bundle.data.length
+      let sentiment = bundle.data.reduce((accum, cur) => accum + cur.daysOpened, 0) > 7 ? c.avatars.happy : c.avatars.angry
       let prs = bundle.data.map(d => `> PR #${d.number} _"${d.title}"_ is *${d.daysOpened} days old*.\n><${d.html_url}>`).join('\n')
-      bark(responseUrl)(`${usersAnswers}, I found *${count}* opened pull${plural} request${plural} in \`${repo}\`\n${prs}`)
+      bark(responseUrl)(`${usersAnswers}, I found *${count}* opened pull${plural} request${plural} in \`${repo}\`\n${prs}\nLilly's sentiment analysis of this repo: ${sentiment}`)
     }
   }
 }
