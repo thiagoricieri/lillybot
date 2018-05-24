@@ -1,1 +1,1 @@
-require('bot/lillySniff')()
+require('/var/www/lillybot/bot/lillySniff')()
