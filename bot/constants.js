@@ -1,5 +1,5 @@
 module.exports = {
-  maxDaysOpened: 0,
+  maxDaysOpened: 1,
   avatars: {
     happy: "https://i.imgur.com/VfIzN1P.jpg",
     angry: "https://i.imgur.com/VpGlXKv.jpg"
